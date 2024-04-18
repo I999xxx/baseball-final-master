@@ -1,7 +1,22 @@
-.original-price {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* 水平對齊方式 */
-  justify-content: flex-end; /* 垂直對齊方式 */
-  height: 100%; /* 如果需要，確保父元素有足夠的高度 */
+.product-image {
+  width: 680px;
+  height: 680px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.color-options {
+  width: 80px;
+  height: 80px;
+  display: flex; /* 使用彈性容器排列子元素 */
+}
+
+.color-options img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

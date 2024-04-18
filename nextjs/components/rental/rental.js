@@ -1,9 +1,10 @@
 import React from 'react'
-import style from './rental.module.css'
+import styles from './rental.module.css'
 import { BsBox } from 'react-icons/bs'
 import { PiBaseballLight } from 'react-icons/pi'
 import { RiShoppingCartLine } from 'react-icons/ri'
 import { FaHeart } from 'react-icons/fa'
+import { FaRegUserCircle } from 'react-icons/fa'
 
 export default function Rental() {
   return (
@@ -20,15 +21,11 @@ export default function Rental() {
         <div className="row">
           <div className="col-6 ">
             {/* 商品圖片 */}
-            <figure className="product-lmage">
-              <img
-                src="/images/logo.png"
-                className="figure-img img-fluid rounded-0"
-                alt="..."
-              />
+            <figure className={`${styles['product-image']}`}>
+              <img src="/images/logo.png" className="img" alt="..." />
             </figure>
             {/*選擇商品顏色*/}
-            <div className="color-options d-inline">
+            <div className={`${styles['color-options']}`}>
               <img src="/images/logo.png" alt="Color Option 1" />
               <img src="/images/logo.png" alt="Color Option 2" />
               <img src="/images/logo.png" alt="Color Option 2" />
@@ -37,21 +34,24 @@ export default function Rental() {
             </div>
           </div>
           <div className="col-6">
-            <div className="col-3 text-danger text-center border border-danger ">
-              <h6>mizuno</h6>
+            <div className="col-1 text-center mb-3">
+              <div className="border border-danger d-inline-block">
+                <h6 className="text-danger m-0 p-2">mizuno</h6>
+              </div>
             </div>
-
-            <h4>棒壘球鞋 WAVE LIGHTREVO</h4>
-            <div className="row align-items-end">
+            <div className="">
+              <h4>棒壘球鞋 WAVE LIGHTREVO</h4>
+            </div>
+            <div className="row align-items-end mt-3">
               <div className="col-3">
                 <h3>$1880 / 1天</h3>
               </div>
               <div className="col text-decoration-line-through">
-                <h6 className="mb-0">$1880</h6>
+                <h6 className="">$1880</h6>
               </div>
             </div>
             {/*商品規格*/}
-            <div className="row">
+            <div className="row mt-3">
               <div className="col-md-6 mb-2">
                 <label htmlFor="inputState" className="form-label ">
                   <h6>顏色</h6>
@@ -70,7 +70,7 @@ export default function Rental() {
                   <option>...</option>
                 </select>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 mt-3">
                 <label htmlFor="inputState" className="form-label">
                   <h6>租借時間</h6>
                 </label>
@@ -79,7 +79,11 @@ export default function Rental() {
                   <option>...</option>
                 </select>
               </div>
+
               <div className="input-group  mt-3 ">
+                <label htmlFor="inputState" className="form-label">
+                  <h6>數量</h6>
+                </label>
                 <button
                   className="btn btn-outline-secondary rounded-0"
                   type="button"
@@ -127,7 +131,17 @@ export default function Rental() {
                 </button>
               </div>
               {/*資訊*/}
-              <div></div>
+              <div>
+                <div className='row'>
+                  <div className='col'>
+                    <p>免運</p>
+                  </div>
+                  <div className='col'>
+                  </div>
+                    <p>滿 5000 元即享免運</p>
+                  
+                </div>
+              </div>
             </div>
           </div>
           {/*商品介紹跟更多類似*/}
