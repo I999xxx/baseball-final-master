@@ -1,0 +1,7 @@
+.original-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 水平對齊方式 */
+  justify-content: flex-end; /* 垂直對齊方式 */
+  height: 100%; /* 如果需要，確保父元素有足夠的高度 */
+}
