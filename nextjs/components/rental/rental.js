@@ -5,6 +5,8 @@ import { PiBaseballLight } from 'react-icons/pi'
 import { RiShoppingCartLine } from 'react-icons/ri'
 import { FaHeart } from 'react-icons/fa'
 import { FaRegUserCircle } from 'react-icons/fa'
+import { AiFillStar } from 'react-icons/ai'
+import { AiOutlineStar } from 'react-icons/ai'
 
 export default function Rental() {
   return (
@@ -113,7 +115,10 @@ export default function Rental() {
                 role="group"
                 aria-label="Basic mixed styles example"
               >
-                <button type="button" className="btn btn-danger rounded-0 d-flex align-items-center justify-content-center ">
+                <button
+                  type="button"
+                  className="btn btn-danger rounded-0 d-flex align-items-center justify-content-center "
+                >
                   <RiShoppingCartLine
                     style={{ color: 'var(--gray-light  )' }}
                   />
@@ -125,18 +130,21 @@ export default function Rental() {
                 role="group"
                 aria-label="Basic mixed styles example"
               >
-                <button type="button" className="btn btn-dark rounded-0 d-flex align-items-center justify-content-center">
+                <button
+                  type="button"
+                  className="btn btn-dark rounded-0 d-flex align-items-center justify-content-center"
+                >
                   <FaHeart style={{ color: 'var(--gray-light)' }} />
                   <span className="ms-2">收藏商品</span>
                 </button>
               </div>
               {/*資訊*/}
               <div>
-                <div className='row'>
-                  <div className='col-1'>
+                <div className="row">
+                  <div className="col-1">
                     <p>免運</p>
                   </div>
-                  <div className='col'>
+                  <div className="col">
                     <p>滿 5000 元即享免運</p>
                   </div>
                 </div>
@@ -145,11 +153,12 @@ export default function Rental() {
           </div>
           {/*商品介紹跟更多類似*/}
 
-          <div className="col-md-6 mt-3">
-            <h5 className="">
+          <div className="col-md-6 mt-3 ">
+            <div className="d-flex align-items-center justify-content-start">
               <PiBaseballLight style={{ color: 'var(--main)' }} />
-              商品介紹
-            </h5>
+              <h5 className="ms-2">商品介紹</h5>
+            </div>
+
             <hr />
             <p>
               材質- <br />
@@ -174,28 +183,27 @@ export default function Rental() {
               <br />
             </p>
             <div>
-              <h5>
+              <div className="d-flex align-items-center justify-content-start">
                 <BsBox style={{ color: 'var(--main)' }} />
-                商品評價
-              </h5>
-
+                <h5 className="ms-2">商品評價</h5>
+              </div>
               <hr />
               <div className="card">
                 <div className="card-body">
-                  <div className="qqq">
+                  <div className="d-flex">
                     <div className="peo">
-                      <img src="" alt="" />
+                      <img src="/images/logo.png" alt="" />
                     </div>
                     <div className="nam">
                       <h5 className="card-title">abc***@***</h5>
                       <h5 className="card-title">2024/11/11</h5>
                     </div>
                     <div className="ms-auto ">
-                      <i className="fa-solid fa-star text-danger" />
-                      <i className="fa-solid fa-star text-danger" />
-                      <i className="fa-solid fa-star text-danger" />
-                      <i className="fa-solid fa-star text-danger" />
-                      <i className="fa-solid fa-star" />
+                      <AiFillStar />
+                      <AiFillStar />
+                      <AiFillStar />
+                      <AiFillStar />
+                      <AiOutlineStar />
                     </div>
                   </div>
                   <p className="card-text">
@@ -207,7 +215,9 @@ export default function Rental() {
           </div>
           {/*更多相似商品*/}
           <div className="col-md-6 mt-3">
-            <h5>更多相似商品</h5>
+            <div style={{ backgroundColor: 'var(--gray-light)' }}>
+              <h5>更多相似商品</h5>
+            </div>
             <hr />
             <div className="row row-cols-4 row-cols-md-4 g-4">
               <div className="col">
