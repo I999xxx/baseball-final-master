@@ -113,11 +113,11 @@ export default function Rental() {
                 role="group"
                 aria-label="Basic mixed styles example"
               >
-                <button type="button" className="btn btn-danger rounded-0">
+                <button type="button" className="btn btn-danger rounded-0 d-flex align-items-center justify-content-center ">
                   <RiShoppingCartLine
                     style={{ color: 'var(--gray-light  )' }}
                   />
-                  加入購物車
+                  <span className="ms-2">加入購物車</span>
                 </button>
               </div>
               <div
@@ -125,21 +125,20 @@ export default function Rental() {
                 role="group"
                 aria-label="Basic mixed styles example"
               >
-                <button type="button" className="btn btn-dark rounded-0">
+                <button type="button" className="btn btn-dark rounded-0 d-flex align-items-center justify-content-center">
                   <FaHeart style={{ color: 'var(--gray-light)' }} />
-                  收藏商品
+                  <span className="ms-2">收藏商品</span>
                 </button>
               </div>
               {/*資訊*/}
               <div>
                 <div className='row'>
-                  <div className='col'>
+                  <div className='col-1'>
                     <p>免運</p>
                   </div>
                   <div className='col'>
-                  </div>
                     <p>滿 5000 元即享免運</p>
-                  
+                  </div>
                 </div>
               </div>
             </div>
