@@ -7,25 +7,29 @@ import { FaHeart } from 'react-icons/fa'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { AiFillStar } from 'react-icons/ai'
 import { AiOutlineStar } from 'react-icons/ai'
+import { GoTriangleRight } from 'react-icons/go'
 
 export default function Rental() {
   return (
     <>
       <div className="container">
-        <nav aria-label="breadcrumb">
-          <ol className="breadcrumb">
-            <li className="breadcrumb-item">所有商品</li>
-            <li className="breadcrumb-item active" aria-current="page">
-              <a href="#">棒球手套</a>
-            </li>
-          </ol>
-        </nav>
+        <div className={`${styles['nav-h']}`}>
+          <nav aria-label="breadcrumb">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item">所有商品</li>
+              <li className="breadcrumb-item active" aria-current="page">
+                <a href="#">棒球手套</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
         <div className="row">
           <div className="col-6 ">
             {/* 商品圖片 */}
-            <figure className={`${styles['product-image']}`}>
+            <div className={`img-fluid${styles['product-image']}`}>
               <img src="/images/logo.png" className="img" alt="..." />
-            </figure>
+            </div>
             {/*選擇商品顏色*/}
             <div className={`${styles['color-options']}`}>
               <img src="/images/logo.png" alt="Color Option 1" />
@@ -139,76 +143,230 @@ export default function Rental() {
                 </button>
               </div>
               {/*資訊*/}
-              <div>
-                <div className="row">
-                  <div className="col-1">
-                    <p>免運</p>
-                  </div>
-                  <div className="col">
-                    <p>滿 5000 元即享免運</p>
-                  </div>
-                </div>
+              <div className={`${styles['free']}`}>
+                <div className={`${styles['box']}`}>免運</div>
+                <div>滿 5000 元即享免運</div>
+              </div>
+              <div className={`${styles['free']}`}>
+                <div className={`${styles['box']}`}>物流</div>
+                <div>宅配｜7-11、全家超商取貨付款</div>
+              </div>
+              <div className={`${styles['free']}`}>
+                <div className={`${styles['box']}`}>寄送</div>
+                <div>全年無休，週末假日照常出貨</div>
+              </div>
+              <div className={`${styles['free']}`}>
+                <div className={`${styles['box']}`}>注意</div>
+                <div>因拍照環境、光線與螢幕顯示器等因素，照片多少存在些許色差，請以實品顏色為準。</div>
               </div>
             </div>
           </div>
           {/*商品介紹跟更多類似*/}
 
           <div className="col-md-6 mt-3 ">
-            <div className="d-flex align-items-center justify-content-start">
-              <PiBaseballLight style={{ color: 'var(--main)' }} />
-              <h5 className="ms-2">商品介紹</h5>
+            <div className={`${styles['product-description']}`}>
+              <PiBaseballLight
+                style={{
+                  color: 'var(--main)',
+                  fontSize: '1.5rem',
+                  marginRight: '10px',
+                }}
+              />
+              <h5>商品介紹</h5>
+            </div>
+            <div className={`${styles['product-details']}`}>
+              <p>
+                材質- <br />
+                鞋面：人工皮革 <br />
+                大底：射出成型大底 <br />
+                重量- 約290g(27.0cm單腳) <br />
+                產地- 柬埔寨 <br />
+                上市月份- 2023年 8月 <br />
+                《注意事項》
+                <br />
+                ※ 此商品可退換，詳情請參閱退換貨規則 <br />
+                ※ 商品展示顏色依實際販售狀況為主 <br />
+                ※ 商品物質特性不同，可能會有約1-2cm前後的誤差。 <br />※
+                依據商品款式、版型、材質、設計等，同樣尺寸於不同商品可能會有所差異{' '}
+                <br />
+                購物須知 <br />
+                寄送時間 : 全年無休，週末假日照常出貨 <br />
+                送貨方式 : 透過宅配送達。除網頁另有特別標示外，均為常溫配送。{' '}
+                <br />
+                送貨範圍 :
+                限台灣本島與離島地區註，部分離島地區包括連江馬祖、綠島、蘭嶼、琉球鄉…等{' '}
+                <br />
+              </p>
             </div>
 
-            <hr />
-            <p>
-              材質- <br />
-              鞋面：人工皮革 <br />
-              大底：射出成型大底 <br />
-              重量- 約290g(27.0cm單腳) <br />
-              產地- 柬埔寨 <br />
-              上市月份- 2023年 8月 <br />
-              《注意事項》
-              <br />
-              ※ 此商品可退換，詳情請參閱退換貨規則 <br />
-              ※ 商品展示顏色依實際販售狀況為主 <br />
-              ※ 商品物質特性不同，可能會有約1-2cm前後的誤差。 <br />※
-              依據商品款式、版型、材質、設計等，同樣尺寸於不同商品可能會有所差異{' '}
-              <br />
-              購物須知 <br />
-              寄送時間 : 全年無休，週末假日照常出貨 <br />
-              送貨方式 : 透過宅配送達。除網頁另有特別標示外，均為常溫配送。{' '}
-              <br />
-              送貨範圍 :
-              限台灣本島與離島地區註，部分離島地區包括連江馬祖、綠島、蘭嶼、琉球鄉…等{' '}
-              <br />
-            </p>
+            <div className={`${styles['colsize-chart-table']}`}>
+              <table>
+                <thead>
+                  <tr>
+                    <th>US男</th>
+                    <th>US女</th>
+                    <th>UK</th>
+                    <th>EU</th>
+                    <th>CM</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>8</td>
+                    <td>9.5</td>
+                    <td>7</td>
+                    <td>41</td>
+                    <td>26</td>
+                  </tr>
+                  <tr>
+                    <td>8.5</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>41.5</td>
+                    <td>26.5</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>10.5</td>
+                    <td>8</td>
+                    <td>42</td>
+                    <td>27</td>
+                  </tr>
+                  <tr>
+                    <td>9.5</td>
+                    <td>11</td>
+                    <td>8.5</td>
+                    <td>42.5</td>
+                    <td>27.5</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>11.5</td>
+                    <td>9</td>
+                    <td>43</td>
+                    <td>28</td>
+                  </tr>
+                  <tr>
+                    <td>10.5</td>
+                    <td>12</td>
+                    <td>8.5</td>
+                    <td>43.5</td>
+                    <td>28.5</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>12.5</td>
+                    <td>10</td>
+                    <td>44</td>
+                    <td>29</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div>
-              <div className="d-flex align-items-center justify-content-start">
-                <BsBox style={{ color: 'var(--main)' }} />
-                <h5 className="ms-2">商品評價</h5>
+              <div className={`${styles['product-description']}`}>
+                <BsBox
+                  style={{
+                    color: 'var(--main)',
+                    fontSize: '1.5rem',
+                    marginRight: '10px',
+                  }}
+                />
+                <h5>商品評價</h5>
               </div>
-              <hr />
-              <div className="card">
-                <div className="card-body">
-                  <div className="d-flex">
-                    <div className="peo">
-                      <img src="/images/logo.png" alt="" />
+
+              <div className={`${styles['all-commen']}`}>
+                <div className={`card ${styles['all-card']}`}>
+                  <div className="card-body">
+                    <div className="d-flex">
+                      <div className={`${styles['peo']}`}>
+                        <img src="/images/logo.png" alt="" />
+                      </div>
+                      <div className="nam">
+                        <h5 className="card-title">abc***@***</h5>
+                        <h5 className="card-title">2024/11/11</h5>
+                      </div>
+                      <div className="ms-auto ">
+                        <AiFillStar
+                          style={{
+                            color: 'var(--main)',
+                          }}
+                        />
+                        <AiFillStar
+                          style={{
+                            color: 'var(--main)',
+                          }}
+                        />
+                        <AiFillStar
+                          style={{
+                            color: 'var(--main)',
+                          }}
+                        />
+                        <AiFillStar
+                          style={{
+                            color: 'var(--main)',
+                          }}
+                        />
+                        <AiOutlineStar
+                          style={{
+                            color: 'var(--main)',
+                          }}
+                        />
+                      </div>
                     </div>
-                    <div className="nam">
-                      <h5 className="card-title">abc***@***</h5>
-                      <h5 className="card-title">2024/11/11</h5>
-                    </div>
-                    <div className="ms-auto ">
-                      <AiFillStar />
-                      <AiFillStar />
-                      <AiFillStar />
-                      <AiFillStar />
-                      <AiOutlineStar />
-                    </div>
+                    <p className="card-text">
+                      版型不錯，但穿起來偏硬，個人較不習慣。有穿去慢跑、打網球，鞋墊的緩衝力很好。
+                    </p>
                   </div>
-                  <p className="card-text">
-                    版型不錯，但穿起來偏硬，個人較不習慣。有穿去慢跑、打網球，鞋墊的緩衝力很好。
-                  </p>
+                </div>
+                <div className={`card ${styles['all-card']}`}>
+                  <div className="card-body">
+                    <div className="d-flex">
+                      <div className={`${styles['peo']}`}>
+                        <img src="/images/logo.png" alt="" />
+                      </div>
+                      <div className="nam">
+                        <h5 className="card-title">abc***@***</h5>
+                        <h5 className="card-title">2024/11/11</h5>
+                      </div>
+                      <div className="ms-auto ">
+                        <AiFillStar
+                          style={{
+                            color: 'var(--main)',
+                          }}
+                        />
+                        <AiFillStar
+                          style={{
+                            color: 'var(--main)',
+                          }}
+                        />
+                        <AiFillStar
+                          style={{
+                            color: 'var(--main)',
+                          }}
+                        />
+                        <AiFillStar
+                          style={{
+                            color: 'var(--main)',
+                          }}
+                        />
+                        <AiOutlineStar
+                          style={{
+                            color: 'var(--main)',
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <p className="card-text">
+                      版型不錯，但穿起來偏硬，個人較不習慣。有穿去慢跑、打網球，鞋墊的緩衝力很好。
+                    </p>
+                  </div>
+                </div>
+                <div className={`${styles['comment']}`}>
+                  <a href="">
+                    查看更多評論
+                    <GoTriangleRight />
+                  </a>
                 </div>
               </div>
             </div>
@@ -216,10 +374,13 @@ export default function Rental() {
           {/*更多相似商品*/}
           <div className="col-md-6 mt-3">
             <div style={{ backgroundColor: 'var(--gray-light)' }}>
-              <h5>更多相似商品</h5>
+              <div className={`${styles['similar-products']}`}>
+                <h5>更多相似商品</h5>
+              </div>
             </div>
-            <hr />
-            <div className="row row-cols-4 row-cols-md-4 g-4">
+            <div
+              className={`row row-cols-4 row-cols-md-4 g-4 ${styles['all-card']}`}
+            >
               <div className="col">
                 <div className="card">
                   <img
@@ -236,7 +397,9 @@ export default function Rental() {
                 </div>
               </div>
             </div>
-            <div className="row row-cols-4 row-cols-md-4 g-4 mt-1">
+            <div
+              className={`row row-cols-4 row-cols-md-4 g-4 ${styles['all-card']}`}
+            >
               <div className="col">
                 <div className="card">
                   <img
@@ -248,8 +411,7 @@ export default function Rental() {
                     <h5 className="card-title">
                       mizuno || 棒壘球鞋 WAVE LIGHTREVO
                     </h5>
-                    <h6 className="card-text">$1880</h6>
-                    <p>$1880</p>
+                    <p className="card-text">$1880</p>
                   </div>
                 </div>
               </div>
