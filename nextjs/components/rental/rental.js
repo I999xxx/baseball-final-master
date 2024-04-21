@@ -25,10 +25,10 @@ export default function Rental() {
         </div>
 
         <div className="row">
-          <div className="col-6 ">
+          <div className="col-md-6 col-12">
             {/* 商品圖片 */}
-            <div className={`img-fluid${styles['product-image']}`}>
-              <img src="/images/logo.png" className="img" alt="..." />
+            <div className={`${styles['product-image']}`}>
+              <img src="/images/logo.png" className="img-fluid" alt="..." />
             </div>
             {/*選擇商品顏色*/}
             <div className={`${styles['color-options']}`}>
@@ -39,125 +39,133 @@ export default function Rental() {
               {/* 可以添加更多顏色選項 */}
             </div>
           </div>
-          <div className="col-6">
-            <div className="col-1 text-center mb-3">
-              <div className="border border-danger d-inline-block">
-                <h6 className="text-danger m-0 p-2">mizuno</h6>
-              </div>
-            </div>
-            <div className="">
-              <h4>棒壘球鞋 WAVE LIGHTREVO</h4>
-            </div>
-            <div className="row align-items-end mt-3">
-              <div className="col-3">
-                <h3>$1880 / 1天</h3>
-              </div>
-              <div className="col text-decoration-line-through">
-                <h6 className="">$1880</h6>
-              </div>
-            </div>
-            {/*商品規格*/}
-            <div className="row mt-3">
-              <div className="col-md-6 mb-2">
-                <label htmlFor="inputState" className="form-label ">
-                  <h6>顏色</h6>
-                </label>
-                <select id="inputState" className="form-select rounded-0">
-                  <option selected="">請選擇顏色</option>
-                  <option>...</option>
-                </select>
-              </div>
-              <div className="col-md-6">
-                <label htmlFor="inputState" className="form-label">
-                  <h6>尺寸</h6>
-                </label>
-                <select id="inputState" className="form-select rounded-0">
-                  <option selected="">請選擇尺寸</option>
-                  <option>...</option>
-                </select>
-              </div>
-              <div className="col-md-6 mt-3">
-                <label htmlFor="inputState" className="form-label">
-                  <h6>租借時間</h6>
-                </label>
-                <select id="inputState" className="form-select rounded-0">
-                  <option selected="">請選擇日期區間</option>
-                  <option>...</option>
-                </select>
-              </div>
+          <div className="col-md-6">
+            <div className="row">
+              <div className="col-12 mt-5">
+                <div className="col-1 text-center mb-3">
+                  <div className="border border-danger d-inline-block">
+                    <h6 className="text-danger m-0 p-2">mizuno</h6>
+                  </div>
+                </div>
+                <div className="">
+                  <h4>棒壘球鞋 WAVE LIGHTREVO</h4>
+                </div>
+                <div className="row d-flex align-items-end;">
+                  <div className={`col-md-3 col-5 mt-3 ${styles['save']}`}>
+                    <h3>$1880 / 1天</h3>
+                  </div>
+                  <div className="col d-flex justify-content-start align-items-end">
+                    <h6 className="text-decoration-line-through">$1880</h6>
+                  </div>
+                </div>
+                {/*商品規格*/}
+                <div className="row mt-3">
+                  <div className="col-md-6 mb-2">
+                    <label htmlFor="inputState" className="form-label ">
+                      <h6>顏色</h6>
+                    </label>
+                    <select id="inputState" className="form-select rounded-0">
+                      <option selected="">請選擇顏色</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div className="col-md-6">
+                    <label htmlFor="inputState" className="form-label">
+                      <h6>尺寸</h6>
+                    </label>
+                    <select id="inputState" className="form-select rounded-0">
+                      <option selected="">請選擇尺寸</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div className="col-md-6 mt-3">
+                    <label htmlFor="inputState" className="form-label">
+                      <h6>租借時間</h6>
+                    </label>
+                    <select id="inputState" className="form-select rounded-0">
+                      <option selected="">請選擇日期區間</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div className="mt-3">
+                    <label htmlFor="inputState" className="form-label">
+                      <h6>數量</h6>
+                    </label>
+                    <div className={`input-group ${styles['ig']}`}>
+                      <button
+                        className="btn btn-outline-secondary rounded-0"
+                        type="button"
+                        id="plus-btn"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="text"
+                        className={`form-control ${styles['digit']}`}
+                        placeholder="1"
+                        aria-label="1"
+                        aria-describedby="basic-addon2"
+                        id="quantity-input"
+                      />
+                      <button
+                        className="btn btn-outline-secondary rounded-0"
+                        type="button"
+                        id="minus-btn"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
 
-              <div className="input-group  mt-3 ">
-                <label htmlFor="inputState" className="form-label">
-                  <h6>數量</h6>
-                </label>
-                <button
-                  className="btn btn-outline-secondary rounded-0"
-                  type="button"
-                  id="plus-btn"
-                >
-                  -
-                </button>
-                <input
-                  type="text"
-                  className="form-control "
-                  placeholder="1"
-                  aria-label="1"
-                  aria-describedby="basic-addon2"
-                  id="quantity-input"
-                />
-                <button
-                  className="btn btn-outline-secondary rounded-0"
-                  type="button"
-                  id="minus-btn"
-                >
-                  +
-                </button>
-              </div>
-              {/*購物按鈕*/}
-              <div
-                className="btn-group col-md-12 mt-3"
-                role="group"
-                aria-label="Basic mixed styles example"
-              >
-                <button
-                  type="button"
-                  className="btn btn-danger rounded-0 d-flex align-items-center justify-content-center "
-                >
-                  <RiShoppingCartLine
-                    style={{ color: 'var(--gray-light  )' }}
-                  />
-                  <span className="ms-2">加入購物車</span>
-                </button>
-              </div>
-              <div
-                className="btn-group col-md-12 mt-3 "
-                role="group"
-                aria-label="Basic mixed styles example"
-              >
-                <button
-                  type="button"
-                  className="btn btn-dark rounded-0 d-flex align-items-center justify-content-center"
-                >
-                  <FaHeart style={{ color: 'var(--gray-light)' }} />
-                  <span className="ms-2">收藏商品</span>
-                </button>
-              </div>
-              {/*資訊*/}
-              <div className={`${styles['free']}`}>
-                <div className={`${styles['box']}`}>免運</div>
-                <div>滿 5000 元即享免運</div>
-              </div>
-              <div className={`${styles['free']}`}>
-                <div className={`${styles['box']}`}>物流</div>
-                <div>宅配｜7-11、全家超商取貨付款</div>
-              </div>
-              <div className={`${styles['free']}`}>
-                <div className={`${styles['box']}`}>寄送</div>
-                <div>全年無休，週末假日照常出貨</div>
-              </div>
-              <div className={`${styles['free']}`}>
-                <div className={`${styles['box']}`}>注意</div>
-                <div>因拍照環境、光線與螢幕顯示器等因素，照片多少存在些許色差，請以實品顏色為準。</div>
+                  {/*購物按鈕*/}
+                  <div
+                    className="btn-group col-md-12 mt-3"
+                    role="group"
+                    aria-label="Basic mixed styles example"
+                  >
+                    <button
+                      type="button"
+                      className="btn btn-danger rounded-0 d-flex align-items-center justify-content-center "
+                    >
+                      <RiShoppingCartLine
+                        style={{ color: 'var(--gray-light  )' }}
+                      />
+                      <span className="ms-2">加入購物車</span>
+                    </button>
+                  </div>
+                  <div
+                    className="btn-group col-md-12 mt-3 "
+                    role="group"
+                    aria-label="Basic mixed styles example"
+                  >
+                    <button
+                      type="button"
+                      className="btn btn-dark rounded-0 d-flex align-items-center justify-content-center"
+                    >
+                      <FaHeart style={{ color: 'var(--gray-light)' }} />
+                      <span className="ms-2">收藏商品</span>
+                    </button>
+                  </div>
+                  {/*資訊*/}
+                  <div className={`${styles['free']}`}>
+                    <div className={`${styles['box']}`}>免運</div>
+                    <div>滿 5000 元即享免運</div>
+                  </div>
+                  <div className={`${styles['free']}`}>
+                    <div className={`${styles['box']}`}>物流</div>
+                    <div>宅配｜7-11、全家超商取貨付款</div>
+                  </div>
+                  <div className={`${styles['free']}`}>
+                    <div className={`${styles['box']}`}>寄送</div>
+                    <div>全年無休，週末假日照常出貨</div>
+                  </div>
+                  <div className={`${styles['free']}`}>
+                    <div className={`${styles['box']}`}>注意</div>
+                    <div>
+                      因拍照環境、光線與螢幕顯示器等因素，照片多少存在些許色差，請以實品顏色為準。
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -379,7 +387,7 @@ export default function Rental() {
               </div>
             </div>
             <div
-              className={`row row-cols-4 row-cols-md-4 g-4 ${styles['all-card']}`}
+              className={`row row-cols-4 row-cols-md-4 g-4 ${styles['all-card1']}`}
             >
               <div className="col">
                 <div className="card">
@@ -389,16 +397,19 @@ export default function Rental() {
                     alt="..."
                   />
                   <div className="card-body">
-                    <h5 className="card-title">
+                    <p className={`${styles['cpm']}`}>
                       mizuno || 棒壘球鞋 WAVE LIGHTREVO
-                    </h5>
-                    <p className="card-text">$1880</p>
+                    </p>
+                    <div className={`${styles['cb']}`}>
+                      <h6 className={`${styles['save1']}`}>$1880</h6>
+                      <p>$1880</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div
-              className={`row row-cols-4 row-cols-md-4 g-4 ${styles['all-card']}`}
+              className={`row row-cols-4 row-cols-md-4 g-4 ${styles['all-card2']} ${styles['all-card1']}`}
             >
               <div className="col">
                 <div className="card">
@@ -408,14 +419,18 @@ export default function Rental() {
                     alt="..."
                   />
                   <div className="card-body">
-                    <h5 className="card-title">
+                    <p className={`${styles['cpm']}`}>
                       mizuno || 棒壘球鞋 WAVE LIGHTREVO
-                    </h5>
-                    <p className="card-text">$1880</p>
+                    </p>
+                    <div className={`${styles['cb']}`}>
+                      <h6 className={`${styles['save1']}`}>$1880</h6>
+                      <p>$1880</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>

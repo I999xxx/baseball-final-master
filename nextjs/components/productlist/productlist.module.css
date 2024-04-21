@@ -1,0 +1,75 @@
+.fc {
+  border-radius: 0;
+}
+.sc {
+  background-color: #91857f;
+  color: var(--text);
+  border-radius: 0;
+}
+
+/*搜尋的按鈕*/
+.bt {
+  white-space: nowrap; /* 確保文字不換行 */
+}
+
+.hm {
+  margin-right: 20px;
+}
+
+.save {
+  color: var(--main);
+}
+
+.ti {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pt {
+  text-decoration: line-through;
+  margin: 0;
+}
+
+.cs {
+  border-radius: 0; /* 移除卡片的圆角 */
+  border: none;
+}
+
+/*滿版圖片*/
+.bi {
+  height: 630px;
+  background-image: url(/images/b.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 70px;
+}
+
+/*pagination樣式設定*/
+.p-item {
+  margin: 0 5px;
+}
+
+.p-link {
+  border: none;
+}
+
+/*手機板*/
+
+@media screen and (max-width: 430px) {
+  /*滿版圖片*/
+  .bi {
+    display: none !important;
+  }
+  /*左半部電腦版搜索*/
+  .left-half {
+    display: none !important;
+  }
+  /*右上搜尋*/
+  .u-right {
+    display: none !important;
+  }
+  .bp {
+    display: none !important;
+  }
+}
